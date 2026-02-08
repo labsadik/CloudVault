@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 13% 95%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 214 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 220 20% 25%;
+
+    --muted: 220 13% 91%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 214 100% 95%;
+    --accent-foreground: 214 100% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 87%;
+    --input: 220 13% 87%;
+    --ring: 214 100% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-bg: 0 0% 100%;
+    --sidebar-fg: 220 10% 30%;
+    --sidebar-hover: 220 13% 95%;
+    --sidebar-active: 214 100% 95%;
+    --sidebar-active-fg: 214 100% 40%;
+
+    --surface: 0 0% 100%;
+    --surface-hover: 220 13% 97%;
+    --surface-active: 214 100% 96%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 10% 30%;
+    --sidebar-primary: 214 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 214 100% 95%;
+    --sidebar-accent-foreground: 214 100% 40%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 214 100% 50%;
+  }
+
+  .dark {
+    --background: 220 16% 8%;
+    --foreground: 220 13% 93%;
+
+    --card: 220 16% 12%;
+    --card-foreground: 220 13% 93%;
+
+    --popover: 220 16% 12%;
+    --popover-foreground: 220 13% 93%;
+
+    --primary: 214 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 16% 16%;
+    --secondary-foreground: 220 13% 80%;
+
+    --muted: 220 16% 16%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 214 60% 18%;
+    --accent-foreground: 214 100% 70%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 16% 18%;
+    --input: 220 16% 18%;
+    --ring: 214 100% 55%;
+
+    --sidebar-bg: 220 16% 10%;
+    --sidebar-fg: 220 10% 70%;
+    --sidebar-hover: 220 16% 14%;
+    --sidebar-active: 214 60% 15%;
+    --sidebar-active-fg: 214 100% 70%;
+
+    --surface: 220 16% 12%;
+    --surface-hover: 220 16% 15%;
+    --surface-active: 214 60% 15%;
+
+    --sidebar-background: 220 16% 10%;
+    --sidebar-foreground: 220 10% 70%;
+    --sidebar-primary: 214 100% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 214 60% 18%;
+    --sidebar-accent-foreground: 214 100% 70%;
+    --sidebar-border: 220 16% 16%;
+    --sidebar-ring: 214 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+}

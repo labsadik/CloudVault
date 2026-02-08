@@ -1,0 +1,7 @@
+project_id = "cbnxtybxeqnfluccodhr"
+
+[functions.bunny-storage]
+verify_jwt = false
+
+[functions.bunny-stream]
+verify_jwt = false
